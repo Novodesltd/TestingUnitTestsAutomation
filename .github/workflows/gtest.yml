@@ -16,10 +16,14 @@ jobs:
       working-directory: ./googletest
       run: cmake .
     - uses: actions/checkout@v1
-    - name: configure
-      run: mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-Werror" ..
+    - name: Create Directory
+      run: mkdir build
+    - name: Configure
+      working-directory: ./build
+      run: cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-Werror" ..
     - name: make
-      run: cd build && make
+      working-directory: ./build
+      run: make
     - name: Run Test
       run: ./bin/unit_tests
 #       run: /home/runner/work/github_actions_gtest_example/github_actions_gtest_example/build/test/github_actions_gtest_example.test
