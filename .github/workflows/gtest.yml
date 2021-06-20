@@ -14,7 +14,9 @@ jobs:
       run: git clone https://github.com/google/googletest.git -b release-1.10.0
     - name: Install gtest manually
       working-directory: ./googletest
-      run: cmake .
+      run: cmake . &&\
+            make &&\
+            sudo make install
     - uses: actions/checkout@v1
     - name: Create Directory
       run: mkdir build
@@ -22,6 +24,5 @@ jobs:
 #       working-directory: ./build
 #       run: cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-Werror" ..
     - name: Run Test
-      working-directory: ./UnitTests_App
-      run: ./Debug
+      run: make all
 #       run: /home/runner/work/github_actions_gtest_example/github_actions_gtest_example/build/test/github_actions_gtest_example.test
