@@ -18,9 +18,9 @@ jobs:
     - uses: actions/checkout@v1
     - name: Create Directory
       run: mkdir build
-    - name: Configure
-      working-directory: ./build
-      run: cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-Werror" ..
+#     - name: Configure
+#       working-directory: ./build
+#       run: cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-Werror" ..
     - name: Run Test
       working-directory: ./UnitTests_App
       run: ./Debug
