@@ -29,5 +29,5 @@ jobs:
 #       run: cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-Werror" ..
     - name: Run Test
       working-directory: ./UnitTests_App
-      run: bazel test --test_output=all //:UnitTestsAPP_test
+      run: bazel test --test_output=all //UnitSource:UnitTestsAPP_test
 #       run: /home/runner/work/github_actions_gtest_example/github_actions_gtest_example/build/test/github_actions_gtest_example.test
