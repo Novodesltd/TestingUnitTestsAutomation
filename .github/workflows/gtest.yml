@@ -20,7 +20,7 @@ jobs:
             sudo make install
     - name: Install Bazel
       run: sudo apt install nodejs &&
-            npm install -g @bazel/bazelisk
+            sudo npm install -g @bazel/bazelisk
     - uses: actions/checkout@v1
     - name: Create Directory
       run: mkdir build
