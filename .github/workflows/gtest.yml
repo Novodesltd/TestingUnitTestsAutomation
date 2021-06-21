@@ -14,12 +14,12 @@ jobs:
       run: git clone https://github.com/google/googletest.git -b release-1.10.0
     - name: Install gtest manually
       working-directory: ./googletest
-      run: sudo apt install python3-pip &&\
-            cmake . &&\
-            make &&\
+      run: sudo apt install python3-pip &&
+            cmake . &&
+            make &&
             sudo make install
     - name: Install Bazel
-      run: sudo apt install nodejs &&\
+      run: sudo apt install nodejs &&
             npm install -g @bazel/bazelisk
     - uses: actions/checkout@v1
     - name: Create Directory
