@@ -1,7 +1,7 @@
 load("@rules_cc//cc:defs.bzl", "cc_test")
 
 cc_test(
-  name = "UnitTestsAPP_test",
+  name = "APP_test",
   size = "small",
   srcs = ["Test1.cpp"],
   copts = ["-Iexternal/gtest/include"],
