@@ -1,7 +1,7 @@
 load("@rules_cc//cc:defs.bzl", "cc_binary")
 
 cc_binary(
-  name = "ola",
+  name = "UnitTestsAPP_test",
   size = "small",
   srcs = ["HelperFunctions.cpp", 
           "MockDefinitions.cpp",
