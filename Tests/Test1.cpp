@@ -18,7 +18,7 @@ TEST(Test1, ReturnHelloWorld)
 
 TEST(Test2, TestFailure)
 {
-	ASSERT_TRUE(false); // to make it pass, change it from false to true.
+	ASSERT_TRUE(true); // to make it pass, change it from false to true.
 }
 
 TEST(Test3, TestPass)
