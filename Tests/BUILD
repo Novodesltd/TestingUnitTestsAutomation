@@ -7,7 +7,8 @@ cc_test(
   copts = ["-Iexternal/gtest/include"],
   deps = [
     "@com_google_googletest//:gtest_main",
-    "//Inc:APPLib"
+    "//Inc:APPLib",
+    "//Src:APP_src"
     ],
 )
 
