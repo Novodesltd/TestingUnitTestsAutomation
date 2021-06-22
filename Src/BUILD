@@ -1,11 +1,10 @@
-load("@rules_cc//cc:defs.bzl", "cc_binary")
+load("@rules_cc//cc:defs.bzl", "cc_library")
 
-cc_binary(
+cc_library(
   name = "APP_test",
-  linkshared = 1
+  visibility = ["//visibility:public"],
   srcs = glob(["**/*.cpp"]),
   hdrs = glob(["**/*.h"]),
-  copts = ["-Iexternal/gtest/include"],
   deps = ["//Inc:APPLib"],
 )
 
