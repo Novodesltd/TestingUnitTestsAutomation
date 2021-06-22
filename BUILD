@@ -15,7 +15,7 @@ cc_test(
 cc_library(
   name = "AppSrc", 
   visibility = ["//visibility:public"],
-  srcs = glob(["**/*.cpp","Src/*.cpp","Tests/*.cpp"]),
-  hdrs = glob(["**/*.h","Inc/*.h"]),
-  copts  = ["-IInc"],
+  srcs = glob(["**/*.cpp"]),
+  hdrs = glob(["**/*.h"]),
+  includes = ["Inc"],
 )
