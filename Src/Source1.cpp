@@ -6,7 +6,7 @@
  */
 
 #include <iostream>
-#include "Inc/Source1.h"
+#include "Source1.h"
 
 using namespace std;
 
