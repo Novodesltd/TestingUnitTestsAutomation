@@ -17,4 +17,5 @@ cc_library(
   visibility = ["//visibility:public"],
   srcs = glob(["**/*.cpp","Src/*.cpp","Tests/*.cpp"]),
   hdrs = glob(["**/*.h","Inc/*.h"]),
+  copts  = ["-IInc"],
 )
